@@ -17,5 +17,3 @@ Developed using:
 ## Authors
 
 - [@abdallahjabr47](https://www.github.com/abdallahjabr47)
-
-<br>My website is now live and has been deployed!
