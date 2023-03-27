@@ -1,0 +1,4 @@
+Please in order to use the admin interface, insert the admin details in the SQL as follows: insert into adminEmployee values (1,"ADMIN","ADMIN","Admin@gmail.com","1990-02-02",123).
+in this case the admin id = 1 and admin password = 123.
+
+We did that for security features and to not make everyone uses the admin interface.
