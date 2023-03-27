@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminInMainTickets">
+   <children>
+      <AnchorPane layoutX="-27.0" layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="1218.0" style="-fx-background-color: orange;">
+         <children>
+            <AnchorPane layoutX="990.0" prefHeight="558.0" prefWidth="230.0" style="-fx-background-color: #A52A2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="990.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <DatePicker fx:id="txt_DepDate" layoutX="28.0" layoutY="104.0" prefHeight="37.0" prefWidth="174.0" promptText="Departure Date" />
+                  <DatePicker fx:id="txt_ReturnDate" layoutX="28.0" layoutY="162.0" prefHeight="37.0" prefWidth="174.0" promptText="Return Date" />
+                  <TextField fx:id="txt_NumOfSeats" alignment="CENTER" layoutX="25.0" layoutY="216.0" prefHeight="30.0" prefWidth="180.0" promptText="Number of Seats" />
+                  <TextField fx:id="txt_numOfPass" alignment="CENTER" layoutX="25.0" layoutY="266.0" prefHeight="30.0" prefWidth="180.0" promptText="Number Of Passengers" />
+                  <TextField fx:id="txt_DepCity" alignment="CENTER" layoutX="25.0" layoutY="311.0" prefHeight="30.0" prefWidth="180.0" promptText="Departure City" />
+                  <TextField fx:id="txt_ArrivalCity" alignment="CENTER" layoutX="25.0" layoutY="356.0" prefHeight="30.0" prefWidth="180.0" promptText="Arrival City" />
+                  <TextField fx:id="txt_Airlines" alignment="CENTER" layoutX="25.0" layoutY="398.0" prefHeight="30.0" prefWidth="180.0" promptText="Airlines Name" />
+                  <TextField fx:id="txt_TicketPrice" alignment="CENTER" layoutX="25.0" layoutY="441.0" prefHeight="30.0" prefWidth="180.0" promptText="Ticket Price" />
+                  <Button fx:id="AddButton" layoutX="15.0" layoutY="486.0" mnemonicParsing="false" onAction="#Add_airplane" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #FFFAF0;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table_ticket" layoutX="30.0" layoutY="114.0" prefHeight="423.0" prefWidth="955.0">
+                     <columns>
+                        <TableColumn fx:id="col_FlightNumber" prefWidth="108.79998970031738" text="Flight Number" />
+                        <TableColumn fx:id="col_DepDate" onEditCommit="#EditTable" prefWidth="95.20001220703125" text="Departure Date" />
+                        <TableColumn fx:id="Col_ReturnDate" onEditCommit="#EditTable" prefWidth="87.19999694824219" text="Return Date" />
+                        <TableColumn fx:id="Col_NumOfSeats" onEditCommit="#EditTable" prefWidth="112.800048828125" text="Number of Seats" />
+                        <TableColumn fx:id="col_NumOfPassengers" onEditCommit="#EditTable" prefWidth="132.79998779296875" text="Number of Passengers" />
+                        <TableColumn fx:id="col_DepartureCity" onEditCommit="#EditTable" prefWidth="103.199951171875" text="Departure City" />
+                        <TableColumn fx:id="col_ArrivalCity" onEditCommit="#EditTable" prefWidth="128.800048828125" text="Arrival City" />
+                        <TableColumn fx:id="col_Airlines" prefWidth="79.2000732421875" text="Airlines" />
+                        <TableColumn fx:id="col_Ticket_Price" onEditCommit="#EditTable" prefWidth="108.8000366210938" text="Ticket Price" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="2.0" prefHeight="108.0" prefWidth="992.0" style="-fx-background-color: #A52A2A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="226.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox layoutX="38.0" layoutY="15.0" prefHeight="82.0" prefWidth="875.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#GoToAirplaneAdmin" prefHeight="179.0" prefWidth="198.0" style="-fx-background-color: #EE854E;" text="Airplanes Information" />
+                        <Button mnemonicParsing="false" onAction="#GoToHotel" prefHeight="94.0" prefWidth="193.0" style="-fx-background-color: #EE854E;" text="Hotels Information" />
+                        <Button mnemonicParsing="false" onAction="#goToAdminCars" prefHeight="114.0" prefWidth="210.0" style="-fx-background-color: #EE854E;" text="Car Rentals Information" />
+                        <Button mnemonicParsing="false" onAction="#goToAdminCities" prefHeight="86.0" prefWidth="178.0" style="-fx-background-color: #EE854E;" text="Cities Information" />
+						 <Button mnemonicParsing="false" onAction="#goToAdminInvoices" prefHeight="82.0" prefWidth="178.0" style="-fx-background-color: #EE854E;" text="Invoices Information" />
+                        <Button mnemonicParsing="false" onAction="#LogOutBackToUser" prefHeight="82.0" prefWidth="166.0" style="-fx-background-color: #EE854E;" text="Log out " />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

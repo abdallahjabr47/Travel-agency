@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CarsController">
+   <children>
+      <SplitPane dividerPositions="0.14469914040114612" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: brown;">
+               <children>
+                  <HBox layoutX="237.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#OpenMainPage" prefHeight="102.0" prefWidth="138.0" style="-fx-background-color: #EE854E;" text="Main Page" />
+                        <Button fx:id="buttonHotels" mnemonicParsing="false" onAction="#changeToHotelF" prefHeight="108.0" prefWidth="110.0" style="-fx-background-color: #EE854E;" text="Hotels" />
+                        <Button fx:id="flights" mnemonicParsing="false" onAction="#changeToFlights" prefHeight="107.0" prefWidth="119.0" style="-fx-background-color: #EE854E;" text="Flights" />
+                        <Button fx:id="buttonCarRentals" mnemonicParsing="false" onAction="#OpenCar" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Car Rentals" />
+                        <Button fx:id="openInvoiceButton" mnemonicParsing="false" onAction="#OpenInvoice" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Your Invoice" />
+                        <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#LogOut" prefHeight="106.0" prefWidth="234.0" style="-fx-background-color: #EE854E;" text="Log out / Exit" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="659.0">
+               <children>
+                  <AnchorPane prefHeight="156.0" prefWidth="700.0" style="-fx-background-color: orange;">
+                     <children>
+                        <ComboBox fx:id="cbCar" layoutX="254.0" layoutY="53.0" prefWidth="150.0" />
+                        <Text layoutX="37.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Searching for A Car?" wrappingWidth="192.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="buttom" layoutX="458.0" layoutY="53.0" mnemonicParsing="false" onAction="#searchForCity" text="Search" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="230.0" layoutY="155.0" prefHeight="439.0" prefWidth="698.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="155.0">
+                     <content>
+                        <VBox fx:id="vbCar" prefHeight="592.0" prefWidth="695.0" style="-fx-background-color: brown;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
