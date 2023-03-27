@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminInInvoice">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1030.0">
+         <children>
+            <AnchorPane layoutX="-28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="1218.0" style="-fx-background-color: orange;">
+               <children>
+                  <AnchorPane layoutX="990.0" prefHeight="558.0" prefWidth="230.0" style="-fx-background-color: #A52A2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="990.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane prefHeight="537.0" prefWidth="1064.0">
+                     <children>
+                        <TableView fx:id="table_Inv" layoutX="30.0" layoutY="108.0" prefHeight="449.0" prefWidth="1192.0">
+                           <columns>
+                              <TableColumn fx:id="col_invId" prefWidth="94.0" text="Invoice Id" />
+                              <TableColumn fx:id="col_CurrentDate" prefWidth="131.0" text="Current Date" />
+                              <TableColumn fx:id="col_FlightPrice" minWidth="0.0" prefWidth="112.0" text="Flight Price" />
+                          	  <TableColumn fx:id="col_HotelPrice" prefWidth="128.0" text="HotelPrice" />
+                              <TableColumn fx:id="col_CarPrice" prefWidth="121.0" text="Car Price" />
+                              <TableColumn fx:id="col_totalPrice" minWidth="0.0" prefWidth="121.0" text="Total Price" />
+                              <TableColumn fx:id="col_PassportNumber" maxWidth="143.0" prefWidth="143.0" text="Passport Number" />
+                              <TableColumn fx:id="col_FirstName" prefWidth="140.0" text="First Name" />
+                              <TableColumn fx:id="col_LastName" maxWidth="252.0" minWidth="0.0" prefWidth="201.0" text="Last Name" />
+                          
+                          
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="2.0" prefHeight="108.0" prefWidth="992.0" style="-fx-background-color: #A52A2A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="226.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="29.0" layoutY="15.0" prefHeight="82.0" prefWidth="851.0" spacing="5.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#GoToAdminTickets" prefHeight="179.0" prefWidth="198.0" style="-fx-background-color: #EE854E;" text="Airplanes Information" />
+                              <Button mnemonicParsing="false" onAction="#goToAdminHotels" prefHeight="94.0" prefWidth="193.0" style="-fx-background-color: #EE854E;" text="Hotels Information" />
+                              <Button mnemonicParsing="false" onAction="#goToAdminCars" prefHeight="114.0" prefWidth="210.0" style="-fx-background-color: #EE854E;" text="Car Rentals Information" />
+                              <Button mnemonicParsing="false" onAction="#GoToAdminCities" prefHeight="86.0" prefWidth="178.0" style="-fx-background-color: #EE854E;" text="Cities Information" />
+                              <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="178.0" style="-fx-background-color: #EE854E;" text="Invoices Information" />
+                              <Button mnemonicParsing="false" onAction="#LogOutBackToUser" prefHeight="82.0" prefWidth="168.0" style="-fx-background-color: #EE854E;" text="Log out " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

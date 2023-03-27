@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HotelReservationController">
+   <children>
+      <SplitPane dividerPositions="0.14630681818181818" layoutX="-2.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="708.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="162.0" style="-fx-background-color: brown;">
+               <children>
+                  <HBox layoutX="2.0" prefHeight="100.0" prefWidth="248.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#changeToMainPage" prefHeight="102.0" prefWidth="138.0" style="-fx-background-color: #EE854E;" text="Main Page" />
+                        <Button fx:id="buttonHotels" mnemonicParsing="false" onAction="#changeToHotelF" prefHeight="108.0" prefWidth="110.0" style="-fx-background-color: #EE854E;" text="Hotels" />
+                        <Button fx:id="flights" mnemonicParsing="false" onAction="#changeToFlight" prefHeight="107.0" prefWidth="119.0" style="-fx-background-color: #EE854E;" text="Flights" />
+                        <Button fx:id="buttonCarRentals" mnemonicParsing="false" onAction="#OpenCarRental" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Car Rentals" />
+                        <Button fx:id="openInvoiceButton" mnemonicParsing="false" onAction="#OpenInvoice" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Your Invoice" />
+                        <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#LogOut" prefHeight="106.0" prefWidth="234.0" style="-fx-background-color: #EE854E;" text="Log out / Exit" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="508.0" prefWidth="673.0" style="-fx-background-color: orange;">
+               <children>
+                  <ScrollPane fx:id="scrollPaneContent" layoutX="-1.0" layoutY="137.0" prefHeight="461.0" prefWidth="706.0" style="-fx-background-color: orange;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="137.0">
+                     <content>
+                        <VBox fx:id="vboxData" prefHeight="448.0" prefWidth="705.0" spacing="5.0" style="-fx-background-color: brown;" />
+                     </content></ScrollPane>
+                  <AnchorPane layoutX="-1.0" layoutY="-4.0" prefHeight="135.0" prefWidth="706.0">
+                     <children>
+                        <ComboBox fx:id="hotelCity" layoutX="269.0" layoutY="43.0" onAction="#openCity" prefWidth="150.0" promptText="City" style="-fx-background-color: #F4E3D2;" AnchorPane.leftAnchor="269.0" AnchorPane.topAnchor="43.0" />
+						<Button fx:id="hotelSearch" layoutX="430.0" layoutY="41.0" mnemonicParsing="false" onAction="#search" text="Search" />
+                        <Text layoutX="22.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Looking For a Specific City?">
+                           <font>
+                              <Font name="Gadugi Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

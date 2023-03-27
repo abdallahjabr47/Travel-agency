@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.flightDetailsController">
+   <children>
+      <SplitPane dividerPositions="0.14040114613180515" layoutX="170.0" layoutY="179.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: brown;">
+               <children>
+                  <HBox layoutX="68.0" layoutY="61.0" prefHeight="34.0" prefWidth="698.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#BackToMainPage" prefHeight="102.0" prefWidth="138.0" style="-fx-background-color: #EE854E;" text="Main Page" />
+                        <Button fx:id="buttonHotels" mnemonicParsing="false" onAction="#changeToHotel" prefHeight="108.0" prefWidth="110.0" style="-fx-background-color: #EE854E;" text="Hotels" />
+                        <Button fx:id="flights" mnemonicParsing="false" onAction="#BackToFlights" prefHeight="107.0" prefWidth="119.0" style="-fx-background-color: #EE854E;" text="Flights" />
+                        <Button fx:id="buttonCarRentals" mnemonicParsing="false" onAction="#OpenCarRental" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Car Rentals" />
+                        <Button fx:id="openInvoiceButton" mnemonicParsing="false" onAction="#OpenInvoice" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Your Invoice" />
+                        <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#LogOut" prefHeight="106.0" prefWidth="234.0" style="-fx-background-color: #EE854E;" text="Log out / Exit" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: orange;">
+               <children>
+                  <Text fill="BROWN" layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Information :" wrappingWidth="228.8577880859375">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font></Text>
+                  <Text fill="BROWN" layoutX="371.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date:" AnchorPane.leftAnchor="371.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Text>
+                  <Text fx:id="AirlineNameText" fill="BROWN" layoutX="377.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airline Name" wrappingWidth="284.0578002929688">
+                     <font>
+                        <Font name="System Bold" size="46.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="14.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure Date: " wrappingWidth="167.654296875" AnchorPane.leftAnchor="14.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Text>
+                  <Text fx:id="DepartureDate" layoutX="186.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.65429687500006">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="flightDate1" fill="BROWN" layoutX="17.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination:" wrappingWidth="115.541015625">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="fromCityD" layoutX="147.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.654296875">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="flightDate12" fill="BROWN" layoutX="75.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From :" wrappingWidth="67.20000000000005">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="ToCityID" layoutX="432.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.654296875">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="flightDate121" fill="BROWN" layoutX="392.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" wrappingWidth="39.999987792968795">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="ReturnDate" layoutX="495.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.4814453125">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="1.0" layoutY="393.0" prefHeight="206.0" prefWidth="700.0" style="-fx-background-color: brown;">
+                     <children>
+                        <Text fill="ORANGE" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer information: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="ORANGE" layoutX="32.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    First Name :" wrappingWidth="147.17285156250006">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="ORANGE" layoutX="36.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passport Number :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="bookButton" layoutX="494.0" layoutY="134.0" mnemonicParsing="false" onAction="#bookAndConfirm" prefHeight="43.0" prefWidth="168.0" text="Book and Confirm" />
+                        <Text fill="ORANGE" layoutX="381.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name :" wrappingWidth="94.44726562500006">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="ORANGE" layoutX="45.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      Email :" wrappingWidth="119.654296875">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="FirstName" layoutX="205.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="147.17285156250006">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="LastName" layoutX="514.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="147.17285156250006">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="PassportNumber" layoutX="205.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="147.17285156250006">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Email" layoutX="197.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.60000000000014">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="signInSignUp" layoutX="496.0" layoutY="115.0" onMouseClicked="#goToSignInOrSignUp" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Sign in or Sign up first" wrappingWidth="183.392578125" />
+                     </children>
+                  </AnchorPane>
+                  <ComboBox fx:id="ticketTypeCode" layoutX="18.0" layoutY="326.0" onAction="#changePrice" prefHeight="26.0" prefWidth="149.0" promptText="         Ticket Type" />
+                  <ComboBox fx:id="ageCode" layoutX="195.0" layoutY="326.0" onAction="#changePrice" prefHeight="26.0" prefWidth="150.0" promptText="                age" />
+                  <Text fx:id="PriceCode" layoutX="356.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="327.54095458984375">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

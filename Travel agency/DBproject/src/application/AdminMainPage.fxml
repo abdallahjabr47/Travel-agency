@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminMainPageController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="805.0" style="-fx-background-color: orange;">
+         <children>
+            <AnchorPane layoutX="483.0" layoutY="1.0" prefHeight="470.0" prefWidth="322.0" style="-fx-background-color: #A52A2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="ADMINID" alignment="CENTER" layoutX="41.0" layoutY="135.0" prefHeight="45.0" prefWidth="236.0" promptText="Admin ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="adminpassword" alignment="CENTER" layoutX="41.0" layoutY="234.0" prefHeight="46.0" prefWidth="236.0" promptText="Admin Password" />
+                  <Button fx:id="signIn" layoutX="43.0" layoutY="336.0" mnemonicParsing="false" onAction="#getAdminID" prefHeight="46.0" prefWidth="236.0" style="-fx-background-color: orange;" text="Sign in " textFill="BROWN">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Label alignment="CENTER" layoutY="23.0" prefHeight="48.0" prefWidth="318.0" text="Sign in as an admin" textFill="ORANGE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Text fill="ORANGE" layoutX="14.0" layoutY="449.0" onMouseClicked="#OpenSiteAsUser" strokeType="OUTSIDE" strokeWidth="0.0" text="Press to Go Back To User View" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="32.0" layoutY="49.0" prefHeight="79.0" prefWidth="392.0" text="Welcome to the Royal for tourism" textFill="BROWN" underline="true">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="128.0" prefHeight="104.0" prefWidth="406.0" text="Only for Admins!" textFill="BROWN">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InvoicesController">
+   <children>
+      <SplitPane dividerPositions="0.14040114613180515" layoutX="170.0" layoutY="179.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: brown;">
+               <children>
+                  <HBox blendMode="SRC_ATOP" layoutX="68.0" layoutY="-2.0" prefHeight="100.0" prefWidth="200.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#OpenMainPage" prefHeight="102.0" prefWidth="138.0" style="-fx-background-color: #EE854E;" text="Main Page" />
+                        <Button fx:id="buttonHotels" mnemonicParsing="false" onAction="#changeToHotelF" prefHeight="108.0" prefWidth="110.0" style="-fx-background-color: #EE854E;" text="Hotels" />
+                        <Button fx:id="flights" mnemonicParsing="false" onAction="#BackToFlights" prefHeight="107.0" prefWidth="119.0" style="-fx-background-color: #EE854E;" text="Flights" />
+                        <Button fx:id="buttonCarRentals" mnemonicParsing="false" onAction="#OpenCarRental" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Car Rentals" />
+                        <Button fx:id="openInvoiceButton" mnemonicParsing="false" onAction="#OpenInvoice" prefHeight="103.0" prefWidth="118.0" style="-fx-background-color: #EE854E;" text="Your Invoice" />
+                        <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#LogOut" prefHeight="106.0" prefWidth="234.0" style="-fx-background-color: #EE854E;" text="Log out / Exit" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: orange;">
+               <children>
+                  <Text fill="BROWN" layoutX="16.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price for booking a car :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="16.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price for booking a hotel :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="25.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Flights :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="29.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name : ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="16.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoices Page  " wrappingWidth="375.27115058898926">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="351.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice ID :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="70.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="BROWN" layoutX="88.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total price :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="invoiceID" layoutX="538.0" layoutY="22.0" prefHeight="31.0" prefWidth="123.0" text="None">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="date" layoutX="168.0" layoutY="91.0" prefHeight="31.0" prefWidth="154.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="priceForHotel" layoutX="290.0" layoutY="383.0" prefHeight="18.0" prefWidth="195.0" text="0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="priceForCar" layoutX="290.0" layoutY="444.0" prefHeight="31.0" prefWidth="195.0" text="0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="TotalPrice" layoutX="280.0" layoutY="523.0" prefHeight="31.0" prefWidth="195.0" text="0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="FirstName" layoutX="218.0" layoutY="60.0" prefHeight="31.0" prefWidth="123.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Label fx:id="LastName" layoutX="423.0" layoutY="60.0" prefHeight="31.0" prefWidth="123.0">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                  <Text fx:id="priceForFlight" layoutX="113.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="579.736686706543" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

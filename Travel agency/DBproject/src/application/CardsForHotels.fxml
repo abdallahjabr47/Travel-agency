@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cardAnchor" prefHeight="152.0" prefWidth="610.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CardsControllerForHotels">
+   <children>
+      <HBox fx:id="cardHBox" layoutX="21.0" layoutY="5.0" prefHeight="137.0" prefWidth="587.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <VBox prefHeight="152.0" prefWidth="585.0">
+               <children>
+                  <Text fx:id="cardTitle" fill="BROWN" strokeType="OUTSIDE" strokeWidth="0.0" text="Ttile:" wrappingWidth="586.9830722808838">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="18.0" prefWidth="386.0">
+                     <children>
+                        <Text fx:id="cardLocation" fill="BROWN" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" wrappingWidth="319.9830722808838">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="cardRating" fill="BROWN" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating:" wrappingWidth="259.9830722808838">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="cardDescription" fill="BROWN" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="506.9830722808838" />
+                        <Button fx:id="cardDetails" mnemonicParsing="false" onAction="#handleDetails" prefHeight="89.0" prefWidth="79.0" text="Details" textAlignment="JUSTIFY" textFill="BROWN" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
